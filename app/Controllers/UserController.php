@@ -29,7 +29,7 @@ class UserController extends BaseController
             ];
 
             $userModel->save($data);
-            
+
             return redirect()->to('/Login');
         }else{
             $data['validation'] = $this->validator;
@@ -43,33 +43,38 @@ class UserController extends BaseController
     }
 
     public function LoginAuth() {
+
         $session = session();
         $userModel = new UserModel();
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $data = $userModel->where('username', $username)->First();
-        
+        $data = $userModel->where('username', $username)->first();
         if($data){
             $pass = $data['password'];
             $authenticatePassword = password_verify($password, $pass);
+                
             if($authenticatePassword){
-                $ses_data = [
-                    'id' => $data['id'],
-                    'username' => $data['username'],
-                    'isLoggedIn' => TRUE,
-                ];
-                $session->set($set_data);
-                return redirect()->to('Admin/profile');
-            }else{
+                    $ses_data = [
+                        'id' => $data['id'],
+                        'username' => $data['username'],
+                        'isLoggedIn' => TRUE
+                    ];
+                    $session->set($ses_data);
+                    return redirect()->to('/admin');
+                }
+                else{
                 $session->setFlashdata('msg','Password is incorrect.');
-                return redirect()->to('Homepage/signin');
+                return redirect()->to('/Login');
+                }
             }
-        }else{
+            else
+            {
                 $session->setFlashdata('msg','Email does not exist.');
-                return redirect()->to('Homepage/signin');
+                return redirect()->to('/Login');
             };
     }
+
     public function index()
     {
         //

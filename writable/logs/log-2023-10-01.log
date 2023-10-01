@@ -581,3 +581,11 @@ in APPPATH\Controllers\UserController.php on line 24.
  3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-01 14:18:56 --> password_hash() expects at least 2 arguments, 1 given
+in APPPATH\Controllers\UserController.php on line 50.
+ 1 APPPATH\Controllers\UserController.php(50): password_hash('12345678')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->LoginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')

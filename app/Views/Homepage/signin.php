@@ -65,7 +65,7 @@
     </style>
   </head>
   <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;'>
-    <form action="/LoginAuthentication" method='post'>
+    <form action="LoginAuth" method='get'>
       <h1>SIGN IN</h1>
       <div class="icon">
         <i class="fas fa-user-circle"></i>
@@ -73,9 +73,9 @@
       <div class="formcontainer">
       <div class="container">
         <label for="username"><strong>Username</strong></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <input type="text" placeholder="Enter Username" name="username" value="<?= set_value('username') ?>" required>
         <label for="password"><strong>Password</strong></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" placeholder="Enter Password" name="password" value="<?= set_value('password') ?>" required>
       </div>
       <button type="submit"><strong>SIGN IN</strong></button>
       </div>
