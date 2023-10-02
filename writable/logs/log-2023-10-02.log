@@ -1,0 +1,60 @@
+CRITICAL - 2023-10-02 05:16:45 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\laragon\\www\\Laboratory_3\\app\\Controllers\\UserController.php', 41)
+ 2 APPPATH\Controllers\UserController.php(41): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:20:10 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\laragon\\www\\Laboratory_3\\app\\Controllers\\UserController.php', 41)
+ 2 APPPATH\Controllers\UserController.php(41): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:20:11 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\laragon\\www\\Laboratory_3\\app\\Controllers\\UserController.php', 41)
+ 2 APPPATH\Controllers\UserController.php(41): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:20:14 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\laragon\\www\\Laboratory_3\\app\\Controllers\\UserController.php', 41)
+ 2 APPPATH\Controllers\UserController.php(41): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:20:25 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\UserController.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'C:\\laragon\\www\\Laboratory_3\\app\\Controllers\\UserController.php', 41)
+ 2 APPPATH\Controllers\UserController.php(41): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:25:04 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\UserController.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')
+CRITICAL - 2023-10-02 05:26:01 --> session_destroy() expects exactly 0 arguments, 1 given
+in APPPATH\Controllers\UserController.php on line 42.
+ 1 APPPATH\Controllers\UserController.php(42): session_destroy(Object(CodeIgniter\Session\Session))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->Login()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\Laboratory_3\\public\\index.php')

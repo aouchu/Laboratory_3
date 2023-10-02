@@ -38,6 +38,8 @@ class UserController extends BaseController
     }
 
     public function Login() {
+        $session = session();
+        session_destroy();
         helper(['form']);
         echo view('Homepage/signin');
     }
