@@ -64,7 +64,7 @@
       }
     </style>
   </head>
-  <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;'>
+  <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;background-attachment:fixed'>
   <form action='/Registering' method='post' >
       <h1>SIGN UP</h1>
       <div class="icon">

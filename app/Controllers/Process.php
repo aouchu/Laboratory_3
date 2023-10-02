@@ -47,7 +47,4 @@ class Process extends BaseController
         return view('Admin/admin');
     }
 
-    public function login() {
-        return view('Homepage/Login');
-    }
 }

@@ -13,5 +13,5 @@ $routes->get('/admin', 'process::admin', ['filter' => 'authGuard']);
 $routes->get('/Login', 'UserController::Login');
 $routes->get('/Register', 'UserController::Signup');
 $routes->post('/Registering', 'UserController::register');
-$routes->get('/LoginAuth', 'UserController::LoginAuth');
+$routes->post('/LoginAuth', 'UserController::LoginAuth');
 

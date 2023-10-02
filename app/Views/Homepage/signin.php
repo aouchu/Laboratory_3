@@ -64,8 +64,8 @@
       }
     </style>
   </head>
-  <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;'>
-    <form action="LoginAuth" method='get'>
+  <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;background-attachment:fixed'>
+    <form action="LoginAuth" method='post'>
       <h1>SIGN IN</h1>
       <div class="icon">
         <i class="fas fa-user-circle"></i>
