@@ -19,7 +19,7 @@ body {
 
 #page-wrapper {
     padding: 15px 15px;
-    min-height: 600px;
+    min-height: fit-content;
     background: #EDEDED;
 }
 #page-inner {
@@ -27,7 +27,7 @@ body {
     margin:10px 20px 10px 0px;
     background-color:transparent;
     padding: 15px 30px;
-    min-height:1200px;
+    min-height:fit-content;
 }
 .header .container-fluid{
 padding:0;
@@ -37,6 +37,53 @@ padding:0;
 }
 .no-boder {
     border:1px solid #f3f3f3;
+}
+
+.hidden {
+    display: hidden;
+}
+
+button:hover {
+    color: #F36A5A !important;
+}
+
+.overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+  }
+  
+#manage {
+    z-index: 3;
+    position: absolute;
+    top:3%;
+    gap: 0.4rem;
+    width:100%;
+
+}
+
+input[type=file]::file-selector-button {
+    border: none;
+    background: #F36A5A;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: black;
+  }
+
+th {
+    text-align:center;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {
@@ -539,9 +586,12 @@ padding-top: 4px;
 ul.nav.nav-second-level.collapse.in {background: #131212;}
 .sidebar-collapse .nav > li > a:hover,
 .sidebar-collapse .nav > li > a:focus {
-	 outline:0;
-	 background: #575757;
-	 color: #F36A5A;
+	 
+outline:0;
+	 
+background: #575757;
+	 
+color: #F36A5A;
 }
  
 .navbar-side {
@@ -621,7 +671,7 @@ line-height: 1.428571429;
      #page-wrapper{
                margin: 0 0 0 260px;
                padding: 0;
-               min-height: 1200px;
+               min-height: fit-content;
     }
 	
 	

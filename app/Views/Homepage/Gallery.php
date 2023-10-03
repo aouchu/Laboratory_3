@@ -11,7 +11,7 @@
                                     <h4 class="tm-gallery-title"><?= $prod['name']; ?></h4>
                                     </hr>
                                     <p style='margin:0 'class="tm-gallery-price">PHP <?= $prod['price']; ?></p>
-                                    <a href='/view/<?= $prod['id']; ?>'><button id="prod-open" type='Button'>View</button></a>
+                                    <a class="tm-btn tm-btn-default tm-right" href='/View/<?= $prod['id']; ?>'>View</a>
                                     </figcaption>
                                 </figure>
                             </article>
@@ -30,7 +30,7 @@
                                     <h4 class="tm-gallery-title"><?= $prod['name']; ?></h4>
                                     </hr>
                                     <p style='margin:0 'class="tm-gallery-price">PHP <?= $prod['price']; ?></p>
-                                    <a href='/view/<?= $prod['id']; ?>'><button id="prod-open" type='Button'>View</button></a>
+                                    <a class="tm-btn tm-btn-default tm-right" href='/View/<?= $prod['id']; ?>'>View</a>
                                     </figcaption>
                                 </figure>
                             </article>
@@ -81,7 +81,7 @@
 						<div class="tm-description-box"> 
 							<h4 class="tm-gallery-title">Maecenas nulla neque</h4>
 							<p class="tm-mb-45">Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a rel="nofollow" href="https://templatemo.com/contact">talk to us</a> for additional permissions about our templates. Thank you.</p>
-							<a href="about.html" class="tm-btn tm-btn-default tm-right">Read More</a>
+							<a  class="tm-btn tm-btn-default tm-right">Read More</a>
 						</div>
 					</div>
 				</div>

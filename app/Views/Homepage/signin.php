@@ -7,11 +7,19 @@
     <style>
       html, body {
       display: flex;
-      justify-content: center;
       font-family: Roboto, Arial, sans-serif;
       font-size: 15px;
+      padding: 5dvh;
       }
-      form {
+      a {
+        text-decoration:none;
+        color:gray;
+      }
+      a:link {
+        color:gray;
+      }
+      a:hover {
+        color:green;
       }
       input[type=text], input[type=password] {
       width: 100%;
@@ -28,6 +36,7 @@
       color: #4286f4;
       }
       button {
+      border-radius: 5dvh;
       background-color: black;
       color: white;
       padding: 14px 0;
@@ -65,10 +74,11 @@
     </style>
   </head>
   <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;background-attachment:fixed'>
-    <form action="LoginAuth" method='post'>
+  <div style='background-color:white;border-radius:3dvh;'>  
+  <form action="/LoginAuth" method='post'>
       <h1>SIGN IN</h1>
       <div class="icon">
-        <i class="fas fa-user-circle"></i>
+        <img src='/uploads/user.png' height='100dvh' width='100dvh' />
       </div>
       <div class="formcontainer">
       <div class="container">
@@ -78,7 +88,13 @@
         <input type="password" placeholder="Enter Password" name="password" value="<?= set_value('password') ?>" required>
       </div>
       <button type="submit"><strong>SIGN IN</strong></button>
+      <h4><a href='/Register'>New Member? Register Here.</a></h4>
       </div>
     </form>
+    </div>
+    
+    <div style='padding: 70px 0;'>
+      <img src='/uploads/logo.png' />
+    </div>
   </body>
 </html>

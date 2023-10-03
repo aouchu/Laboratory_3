@@ -1,67 +1,40 @@
 <div id="page-inner">
         <div class="row">
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-xs-12"> <!--col-md-8 col-sm-12  -->
 
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Responsive Table Example
+                                Products
                             </div> 
                             <div class="panel-body">
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
                                             <tr>
-                                                <th>S No.</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>User Name</th>
-                                                <th>Email ID.</th>
+                                                <th>ID</th>
+                                                <th>Product's Name</th>
+                                                <th>Description</th>
+                                                <th>Image</th>
+                                                <th>Price</th>
+                                                <th>Category</th>
+                                                <th>Quantity</th>
+                                                <th colspan='2'>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php foreach($products as $pr): ?>
                                             <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>John15482</td>
-                                                <td>name@site.com</td>
+                                                <td><?= $pr['id']; ?></td>
+                                                <td><?= $pr['name']; ?></td>
+                                                <td><?= $pr['description']; ?></td>
+                                                <td><img src='<?= $pr['image']; ?>' height='50dvh' width='50dvh' /></td>
+                                                <td><?= $pr['price']; ?></td>
+                                                <td><?= $pr['category']; ?></td>
+                                                <td><?= $pr['quantity']; ?></td>
+                                                <td><a href='/Delete/<?= $pr['id']; ?>' >Delete</a></td>
+                                                <td><button style='background-color:transparent;border:none;color:blue' onclick="editing(<?= $pr['id']; ?>)">Edit</a></td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Kimsila</td>
-                                                <td>Marriye</td>
-                                                <td>Kim1425</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Rossye</td>
-                                                <td>Nermal</td>
-                                                <td>Rossy1245</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Richard</td>
-                                                <td>Orieal</td>
-                                                <td>Rich5685</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Jacob</td>
-                                                <td>Hielsar</td>
-                                                <td>Jac4587</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Wrapel</td>
-                                                <td>Dere</td>
-                                                <td>Wrap4585</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-
+                                            <?php endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -71,33 +44,5 @@
                     </div>
                 </div>
                 <!-- /. ROW  -->
-                <div class="row">
-                        <div class="col-xs-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <div class="card-title">
-                                        <div class="title">Basic example</div>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputFile">File input</label>
-                                            <input type="file" id="exampleInputFile">
-                                            <p class="help-block">Example block-level help text here.</p>
-                                        </div>
-                                        <button type="submit" class="btn btn-default">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
 </div>

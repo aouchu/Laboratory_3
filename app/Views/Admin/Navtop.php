@@ -4,7 +4,7 @@
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Manage Products</a>
+                        <a class="active-menu" href="/Admin"><i class="fa fa-dashboard"></i> Manage Products</a>
                     </li>
                 </ul>
 

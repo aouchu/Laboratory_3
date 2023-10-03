@@ -1,5 +1,5 @@
 <div class="placeholder">
-			<div class="parallax-window" data-parallax="scroll" data-image-src="/uploads/header.jpg">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="/uploads/bg.jpg">
 				<div class="tm-header">
 					<div class="row tm-header-inner">
 						<div class="col-md-6 col-12">
@@ -11,9 +11,9 @@
 						</div>
 						<nav class="col-md-6 col-12 tm-nav">
 							<ul class="tm-nav-ul">
-								<li class="tm-nav-li"><a href="/index" class="tm-nav-link active">Home</a></li>
-								<li class="tm-nav-li"><a href="/Login" class="tm-nav-link">Login</a></li>
-								<li class="tm-nav-li"><a href="/Register" class="tm-nav-link">Register</a></li>
+								<li class="tm-nav-li"><a href="/Index" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="/Logout" class="tm-nav-link">Logout</a></li>
+								<li class="tm-nav-li"><span style='color:gray'>Welcome, </span><span style='color:rgb(4, 179, 48)' ><?php echo $_SESSION['username']; ?></span><span style='color:gray'>!</span></li>
 							</ul>
 						</nav>	
 					</div>

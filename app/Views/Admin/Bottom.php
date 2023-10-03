@@ -19,6 +19,10 @@
 	
     <!-- Custom Js -->
     <script src="/assets/js/custom-scripts.js"></script>
+    <script src="/assets/js/custom.js"></script>
+
+    <!-- Modal -->
+    <script src="/assets/js/modal.js"></script>
 
       
     <!-- Chart Js -->

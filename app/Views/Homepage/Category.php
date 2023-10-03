@@ -8,10 +8,10 @@
 					<ul>
 						<?php $first = true; foreach($category as $cat): ?>
 							<?php if($first): ?>
-								<li class="tm-paging-item"><a href="/category/<?= $cat['category']; ?>" class="tm-paging-link active"><?= $cat['category']; ?></a></li>
+								<li class="tm-paging-item"><a href="/Category/<?= $cat['category']; ?>" class="tm-paging-link active"><?= $cat['category']; ?></a></li>
 								<?php $first = false; ?>
 							<?php else: ?>
-								<li class="tm-paging-item"><a href="/category/<?= $cat['category']; ?>" class="tm-paging-link"><?= $cat['category'];?></a></li>
+								<li class="tm-paging-item"><a href="/Category/<?= $cat['category']; ?>" class="tm-paging-link"><?= $cat['category'];?></a></li>
 							<?php endif; ?>
 						<?php endforeach; ?>
 					</ul>

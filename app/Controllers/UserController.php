@@ -26,6 +26,7 @@ class UserController extends BaseController
             $data =[
             'username' => $this->request->getVar('username'),
             'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+            'usertype' => 'user',
             ];
 
             $userModel->save($data);
@@ -33,15 +34,19 @@ class UserController extends BaseController
             return redirect()->to('/Login');
         }else{
             $data['validation'] = $this->validator;
-            echo view('Homepage/signup', $data);
+            return redirect()->to('/Register');
             };
     }
 
     public function Login() {
-        $session = session();
-        session_destroy();
         helper(['form']);
         echo view('Homepage/signin');
+    }
+
+    public function Logout() {
+        $session = session();
+        session_destroy();
+        return redirect()->to('/Login');
     }
 
     public function LoginAuth() {
@@ -60,10 +65,17 @@ class UserController extends BaseController
                     $ses_data = [
                         'id' => $data['id'],
                         'username' => $data['username'],
-                        'isLoggedIn' => TRUE
+                        'usertype' => $data['usertype'],
+                        'isLoggedIn' => TRUE,
                     ];
                     $session->set($ses_data);
-                    return redirect()->to('/admin');
+
+                    if($_SESSION['usertype'] == 'admin'){
+                        return redirect()->to('/Admin');
+                    }
+                    else{
+                        return redirect()->to('/Index');
+                    }
                 }
                 else{
                 $session->setFlashdata('msg','Password is incorrect.');

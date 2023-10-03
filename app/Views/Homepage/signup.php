@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <title>Simple Sign up from</title>
+  <title>Sign Up</title>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <style>
       html, body {
       display: flex;
-      justify-content: center;
       font-family: Roboto, Arial, sans-serif;
       font-size: 15px;
+      padding: 5dvh;
       }
-      form {
+      a {
+        text-decoration:none;
+        color:gray;
+      }
+      a:link {
+        color:gray;
+      }
+      a:hover {
+        color:green;
       }
       input[type=text], input[type=password] {
       width: 100%;
@@ -28,6 +36,7 @@
       color: #4286f4;
       }
       button {
+      border-radius: 5dvh;
       background-color: black;
       color: white;
       padding: 14px 0;
@@ -65,10 +74,11 @@
     </style>
   </head>
   <body style='background-image:url("/uploads/bg.jpg");background-repeat:no-repeat;background-size:cover;background-position:absolute;background-attachment:fixed'>
-  <form action='/Registering' method='post' >
+  <div style='background-color:white;border-radius:3dvh;'>  
+  <form action="/Registering" method='post'>
       <h1>SIGN UP</h1>
       <div class="icon">
-        <i class="fas fa-user-circle"></i>
+        <img src='/uploads/user.png' height='100dvh' width='100dvh' />
       </div>
       <div class="formcontainer">
       <div class="container">
@@ -76,11 +86,17 @@
         <input type="text" placeholder="Enter Username" name="username" value="<?= set_value('username') ?>" required>
         <label for="password"><strong>Password</strong></label>
         <input type="password" placeholder="Enter Password" name="password" value="<?= set_value('password') ?>" required>
-        <label for="confirm password"><strong>Confirm Password</strong></label>
-        <input type="password" placeholder="Confirm password" name="confirmpassword" value="<?= set_value('confirmpassword') ?>" required>
+        <label for="password"><strong>Confirm Password</strong></label>
+        <input type="password" placeholder="Confirm Password" name="confirmpassword" value="<?= set_value('confirmpassword') ?>" required>
       </div>
       <button type="submit"><strong>SIGN UP</strong></button>
+      <h4><a href='/Login'>Already have an account? Login.</a></h4>
       </div>
-</form>
+    </form>
+    </div>
+    
+    <div style='padding: 70px 0;'>
+      <img src='/uploads/logo.png' />
+    </div>
   </body>
 </html>
