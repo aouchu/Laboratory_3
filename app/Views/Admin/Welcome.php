@@ -5,7 +5,7 @@
                         </h1>
 						<ol class="breadcrumb">
 					  <li class='active'>Home</li>
-					  <li><button style='background-color:transparent;border:none' onclick='openModal()'>Add Products</button></li>
+					  <li><button style='background-color:transparent;border:none' onclick='add();'>Add Products</button></li>
 					  
 					</ol> 
 									

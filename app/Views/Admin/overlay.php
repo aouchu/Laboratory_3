@@ -1,12 +1,12 @@
-<div class='overlay <?php if(!isset($prod['id'])): ?><?= 'hidden'; endif; ?>'>
+<div class='overlay <?php if(isset($prod['id']) || isset($setter)): else:?><?= 'hidden'; endif; ?>'>
 </div>
 
-<section id='manage' class='<?php if(!isset($prod['id'])): ?><?= 'hidden'; endif; ?>'>
+<section id='manage' class='<?php if(isset($prod['id']) || isset($setter)): else:?><?= 'hidden'; endif; ?>'>
                         <div class="col-sm-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="card-title">
-                                        <div class="title">Add or Edit Products
+                                        <div class="title"><?php if($setter == 'null'): ?><?= 'Add'; else: ?><?= 'Edit'; endif; ?> Products
                                             <button style='float:right;background-color:transparent;border:none;padding:0;margin:0' onclick='closeModal()'>⨉</button>
                                         </div>
                                     </div>

@@ -8,6 +8,7 @@ class Process extends BaseController
 {
     private $products;
     private $users;
+
     
     public function __construct(){
         $this->products = new \App\Models\Products();
@@ -66,6 +67,7 @@ class Process extends BaseController
             'products' => $this->products->FindAll(),
             'prod' => $this->products->where('id', $id)->First(), 
             'currentuser' => $_SESSION['username'],
+            'setter' => $id,
         ];
         return view('Admin/admin', $data);
     }
@@ -87,7 +89,7 @@ class Process extends BaseController
 
         //Condition to either update or save the data
         //Saving the data >>>
-        if($id == null) {
+        if($id == null || $id == 'null') {
 
             //adding the image
             $file->move(PUBLIC_PATH.'\uploads\\');
