@@ -27,7 +27,8 @@ body {
     margin:10px 20px 10px 0px;
     background-color:transparent;
     padding: 15px 30px;
-    min-height:fit-content;
+    height:fit-content;
+    min-height:67dvh;
 }
 .header .container-fluid{
 padding:0;
@@ -84,6 +85,9 @@ input[type=file]::file-selector-button {
 
 th {
     text-align:center;
+}
+a:link {
+    color:blue !important;
 }
 
 h1, .h1, h2, .h2, h3, .h3 {

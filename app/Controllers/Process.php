@@ -72,6 +72,28 @@ class Process extends BaseController
         return view('Admin/admin', $data);
     }
 
+    public function Delete($id) {
+        $session = session();
+        session_start();
+        $this->products->where('id', $id)->delete();
+        return redirect()->to('/Admin');
+    }
+
+    public function Search() {
+        $session = session();
+        session_start();
+        $categ = $this->request->getVar('option'); 
+        $search = $this->request->getVar('find');
+        $data = [
+            'products' => $this->products->FindAll(),
+            'search' => $this->products->like($categ, $search)->FindAll(),
+            'currentuser' => $_SESSION['username'],
+            'set' => $search,
+        ];
+        return view('Admin/admin', $data);
+        
+    }
+
     public function save() {
         //session for security
         $session = session();

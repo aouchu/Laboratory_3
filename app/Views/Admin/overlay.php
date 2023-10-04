@@ -6,7 +6,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <div class="card-title">
-                                        <div class="title"><?php if($setter == 'null'): ?><?= 'Add'; else: ?><?= 'Edit'; endif; ?> Products
+                                        <div class="title"><?php if(isset($setter)): if($setter == 'null'): ?><?= 'Add'; else: ?><?= 'Edit'; endif; endif; ?> Products
                                             <button style='float:right;background-color:transparent;border:none;padding:0;margin:0' onclick='closeModal()'>⨉</button>
                                         </div>
                                     </div>

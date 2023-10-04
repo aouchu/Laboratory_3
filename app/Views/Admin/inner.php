@@ -5,8 +5,22 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Products
-                            </div> 
+                            </div>
                             <div class="panel-body">
+                            <form action='/Search' method='get'>
+                                <div class="form-group">
+                                    <label for="find">Search:</label>
+                                    <input type="text" style='width:50%;display:inline' name="find">
+                                    <select id='option' style='padding:.22dvh;display:inline' name='option'>
+                                        <option>Select a Category</option>
+                                        <option value='name'>Name</option>
+                                        <option value='description'>Description</option>
+                                        <option value='price'>Price</option>
+                                        <option value='category'>Category</option>
+                                        <option value='quantity'>Quantity</option>
+                                    </select>
+                                </div>  
+                            </form>
                                 <div class="table-responsive">
                                     <table class="table table-striped table-bordered table-hover">
                                         <thead>
@@ -22,6 +36,21 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php if(isset($set)): ?>
+                                                <?php foreach($search as $rows): ?>
+                                            <tr>
+                                                <td><?= $rows['id']; ?></td>
+                                                <td><?= $rows['name']; ?></td>
+                                                <td><?= $rows['description']; ?></td>
+                                                <td><img src='<?= $rows['image']; ?>' height='50dvh' width='50dvh' /></td>
+                                                <td><?= $rows['price']; ?></td>
+                                                <td><?= $rows['category']; ?></td>
+                                                <td><?= $rows['quantity']; ?></td>
+                                                <td><a href='/Delete/<?= $rows['id']; ?>' >Delete</a></td>
+                                                <td><button style='background-color:transparent;border:none;color:blue' onclick="editing(<?= $rows['id']; ?>)">Edit</a></td>
+                                            </tr>
+                                            <?php endforeach; ?>
+                                            <?php else: ?>
                                             <?php foreach($products as $pr): ?>
                                             <tr>
                                                 <td><?= $pr['id']; ?></td>
@@ -35,6 +64,7 @@
                                                 <td><button style='background-color:transparent;border:none;color:blue' onclick="editing(<?= $pr['id']; ?>)">Edit</a></td>
                                             </tr>
                                             <?php endforeach; ?>
+                                            <?php endif; ?>
                                         </tbody>
                                     </table>
                                 </div>
