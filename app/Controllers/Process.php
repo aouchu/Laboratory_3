@@ -75,7 +75,10 @@ class Process extends BaseController
     public function Delete($id) {
         $session = session();
         session_start();
+        $file = $this->products->select('image')->where('id', $id)->First();
         $this->products->where('id', $id)->delete();
+        $path = PUBLIC_PATH.$file['image'];
+        unlink($path);
         return redirect()->to('/Admin');
     }
 
